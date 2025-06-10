@@ -198,6 +198,25 @@
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <separator/>
         </group>
+
+        <!-- Send to LLM Chat Action for Problems and Build tool windows -->
+        <action id="SendToLLMChatAction"
+                class="com.smallcloud.refactai.listeners.SendToLLMChatAction"
+                text="Send to Refact.ai Chat"
+                description="Send selected context to Refact.ai Chat">
+            <add-to-group group-id="TreePopupMenu" anchor="last"/>
+            <add-to-group group-id="ConsoleViewPopupMenu" anchor="last"/>
+        </action>
+
+        <!-- Simplified version for testing -->
+        <action id="SendToLLMChatActionSimple"
+                class="com.smallcloud.refactai.listeners.SendToLLMChatActionSimple"
+                text="Send to Refact.ai Chat (Simple)"
+                description="Send selected text to Refact.ai Chat (Simplified version)">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="TreePopupMenu" anchor="last"/>
+            <add-to-group group-id="ConsoleViewPopupMenu" anchor="last"/>
+        </action>
 <!--        Temporary disable; JB has broken vcs plugin in 2024.3 -->
         <group id="RefactAI.GenerateGitCommitMessageGroup">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
